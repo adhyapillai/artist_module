@@ -1,0 +1,67 @@
+<nav class="sidebar" id="sidebar">
+
+    <h2>
+        <i class="ri-music-2-line"></i>
+        <span class="sidebar-brand-text">CreoVibe</span>
+    </h2>
+
+    <ul>
+        <li>
+            <a href="dashboard.html" class="active" data-page="dashboard">
+                <i class="bi bi-grid-1x2-fill"></i> Dashboard
+            </a>
+        </li>
+        <li>
+            <a href="profile.html" data-page="profile">
+                <i class="bi bi-person-fill"></i> Profile
+            </a>
+        </li>
+        <li>
+            <a href="subscription.html" data-page="subscription">
+                <i class="bi bi-star-fill"></i> Subscription
+            </a>
+        </li>
+        <li>
+            <a href="calendar_view.html" data-page="calendar_view">
+                <i class="bi bi-calendar3"></i> Calendar
+            </a>
+        </li>
+        <li>
+            <a href="booking_details.html" data-page="booking_details">
+                <i class="bi bi-calendar2-check-fill"></i> Bookings
+            </a>
+        </li>
+        <li>
+            <a href="earnings.html" data-page="earnings">
+                <i class="bi bi-credit-card-2-front-fill"></i> Earnings
+            </a>
+        </li>
+        <li>
+            <a href="notifications.html" data-page="notifications">
+                <i class="bi bi-bell-fill"></i> Notifications
+            </a>
+        </li>
+        <li>
+            <a href="feedback.html" data-page="feedback">
+                <i class="bi bi-chat-dots-fill"></i> Feedback
+            </a>
+        </li>
+        <li>
+            <a href="change_password.html" data-page="change_password">
+                <i class="bi bi-key-fill"></i> Change Password
+            </a>
+        </li>
+    </ul>
+
+</nav>
+
+<script>
+/* Auto-mark the active nav link based on current page filename */
+(function () {
+    var page = location.pathname.split('/').pop().replace('.html', '') || 'dashboard';
+    document.querySelectorAll('.sidebar a[data-page]').forEach(function (a) {
+        a.classList.remove('active');
+        if (a.dataset.page === page) a.classList.add('active');
+    });
+})();
+</script>
